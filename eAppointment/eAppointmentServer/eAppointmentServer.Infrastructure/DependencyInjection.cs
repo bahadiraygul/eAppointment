@@ -1,16 +1,11 @@
-﻿
-
-using eAppointmentServer.Application.Services;
-using eAppointmentServer.Domain.Entities;
-using eAppointmentServer.Domain.Repositories;
+﻿using eAppointmentServer.Domain.Entities;
 using eAppointmentServer.Infrastructure.Context;
-using eAppointmentServer.Infrastructure.Repositories;
-using eAppointmentServer.Infrastructure.Services;
-using GenericRepository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Scrutor;
+using System;
 
 namespace eAppointmentServer.Infrastructure;
 
@@ -21,8 +16,18 @@ public static class DependencyInjection
         IConfiguration configuration)
     {
         services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("SqlServer")));
-
+        {
+            var connectionString = configuration.GetConnectionString("SqlServer");
+            options.UseMySql(
+                connectionString,
+                ServerVersion.AutoDetect(connectionString),
+                mySqlOptions =>
+                {
+                    mySqlOptions.EnableRetryOnFailure();
+                    mySqlOptions.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName);
+                });
+        });
+        
         services.AddIdentity<AppUser, AppRole>(action =>
         {
             action.Password.RequireDigit = false;
@@ -35,12 +40,10 @@ public static class DependencyInjection
         services.Scan(action =>
         {
             action.FromAssemblies(typeof(DependencyInjection).Assembly)
-            .AddClasses(publicOnly:false)
-            .UsingRegistrationStrategy(registrationStrategy: RegistrationStrategy.Skip)
+            .AddClasses(publicOnly: false)
+            .UsingRegistrationStrategy(RegistrationStrategy.Skip)
             .AsImplementedInterfaces()
             .WithScopedLifetime();
-
-
         });
 
         return services;
