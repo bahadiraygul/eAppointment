@@ -15,6 +15,22 @@
           }
         }
       },
+      "AutoMapper/14.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.25.0": {
         "type": "package",
         "dependencies": {
@@ -1469,7 +1485,7 @@
           }
         }
       },
-      "Scrutor/6.0.1": {
+      "Scrutor/6.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
@@ -2130,6 +2146,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "AutoMapper": "14.0.0",
           "MediatR": "12.5.0",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.5",
@@ -2181,6 +2198,21 @@
         "lib/net8.0/Ardalis.SmartEnum.xml",
         "lib/netstandard2.0/Ardalis.SmartEnum.dll",
         "lib/netstandard2.0/Ardalis.SmartEnum.xml"
+      ]
+    },
+    "AutoMapper/14.0.0": {
+      "sha512": "OC+1neAPM4oCCqQj3g2GJ2shziNNhOkxmNB9cVS8jtx4JbgmRzLcUOxB9Tsz6cVPHugdkHgCaCrTjjSI0Z5sCQ==",
+      "type": "package",
+      "path": "automapper/14.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.14.0.0.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net8.0/AutoMapper.dll",
+        "lib/net8.0/AutoMapper.xml"
       ]
     },
     "Azure.Core/1.25.0": {
@@ -4170,10 +4202,10 @@
         "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
-    "Scrutor/6.0.1": {
-      "sha512": "5xKT6ND5GqnFzwSaYozHCJe75GFL8sPy4yw/iRFqeBFGlmqPNFpOg1T9Q0Gl2h76Cklt0ZTg6Ypkri5iUBKXsA==",
+    "Scrutor/6.0.0": {
+      "sha512": "KK8R6j19cDWOjKPxeVwxkqoD/VQqb4ZX8VEeTMCMlOUC7N28NHZzJ8rHBmHvfG2aecXrvtXqWl3+ExvtYW3eFA==",
       "type": "package",
-      "path": "scrutor/6.0.1",
+      "path": "scrutor/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4187,7 +4219,7 @@
         "lib/netstandard2.0/Scrutor.dll",
         "lib/netstandard2.0/Scrutor.pdb",
         "lib/netstandard2.0/Scrutor.xml",
-        "scrutor.6.0.1.nupkg.sha512",
+        "scrutor.6.0.0.nupkg.sha512",
         "scrutor.nuspec"
       ]
     },
@@ -5336,7 +5368,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.5",
       "Pomelo.EntityFrameworkCore.MySql >= 8.0.3",
-      "Scrutor >= 6.0.1",
+      "Scrutor >= 6.0.0",
       "eAppointmentServer.Application >= 1.0.0",
       "eAppointmentServer.Domain >= 1.0.0"
     ]
@@ -5431,7 +5463,7 @@
           },
           "Scrutor": {
             "target": "Package",
-            "version": "[6.0.1, )"
+            "version": "[6.0.0, )"
           }
         },
         "imports": [

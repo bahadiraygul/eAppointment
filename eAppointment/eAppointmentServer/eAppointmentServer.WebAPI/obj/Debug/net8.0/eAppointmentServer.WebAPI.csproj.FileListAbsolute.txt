@@ -170,3 +170,4 @@ C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.WebAPI\obj\Debug\net8.0\eAppointmentServer.WebAPI.pdb
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.WebAPI\obj\Debug\net8.0\eAppointmentServer.WebAPI.genruntimeconfig.cache
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.WebAPI\obj\Debug\net8.0\ref\eAppointmentServer.WebAPI.dll
+C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.WebAPI\bin\Debug\net8.0\AutoMapper.dll

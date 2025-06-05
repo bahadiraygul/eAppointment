@@ -3,17 +3,16 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eAppointmentServer.WebAPI.Controllers
+namespace eAppointmentServer.WebAPI.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class AuthController(IMediator mediator) : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AuthController(IMediator mediator) : ControllerBase
+    [HttpPost("Login")]
+    public async Task<IActionResult> Login(LoginCommand request, CancellationToken cancellationToken)
     {
-        [HttpPost]
-        public async Task<IActionResult> Login(LoginCommand request, CancellationToken cancellationToken)
-        {
-            var response = await mediator.Send(request);
-            return StatusCode(response.StatusCode, response);
-        }
+        var response = await mediator.Send(request);
+        return StatusCode(response.StatusCode, response);
     }
 }

@@ -2,7 +2,7 @@
   {
     "ContainingType": "eAppointmentServer.WebAPI.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/Auth",
+    "RelativePath": "api/Auth/Login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -10,6 +10,38 @@
       {
         "Name": "request",
         "Type": "eAppointmentServer.Application.Features.Auth.Login.LoginCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eAppointmentServer.WebAPI.Controllers.DoctorsController",
+    "Method": "Create",
+    "RelativePath": "api/Doctors/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "eAppointmentServer.Application.Features.Doctors.CreateDoctor.CreateDoctorCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eAppointmentServer.WebAPI.Controllers.DoctorsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Doctors/GetAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "eAppointmentServer.Application.Features.Doctors.GetAllDoctor.GetAllDoctorsQuery",
         "IsRequired": true
       }
     ],

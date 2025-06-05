@@ -2,7 +2,9 @@ C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Infrastructure.runtimeconfig.json
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Infrastructure.dll
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Infrastructure.pdb
+C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Application.dll
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Domain.dll
+C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Application.pdb
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Domain.pdb
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\obj\Debug\net8.0\eAppointmentServer.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\obj\Debug\net8.0\eAppointmentServer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,5 +17,3 @@ C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\obj\Debug\net8.0\eAppointmentServer.Infrastructure.pdb
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\obj\Debug\net8.0\eAppointmentServer.Infrastructure.genruntimeconfig.cache
 C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\obj\Debug\net8.0\ref\eAppointmentServer.Infrastructure.dll
-C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Application.dll
-C:\Users\Ahmed Aygül\Desktop\eAppointment\eAppointmentServer\eAppointmentServer.Infrastructure\bin\Debug\net8.0\eAppointmentServer.Application.pdb

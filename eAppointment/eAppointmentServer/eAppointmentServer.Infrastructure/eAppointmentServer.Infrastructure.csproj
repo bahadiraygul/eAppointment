@@ -18,12 +18,16 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.5" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
-    <PackageReference Include="Scrutor" Version="6.0.1" />
+    <PackageReference Include="Scrutor" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\eAppointmentServer.Application\eAppointmentServer.Application.csproj" />
     <ProjectReference Include="..\eAppointmentServer.Domain\eAppointmentServer.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

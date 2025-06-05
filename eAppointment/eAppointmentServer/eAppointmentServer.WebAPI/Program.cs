@@ -13,7 +13,6 @@ builder.Services.AddCors();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// Burada DbContext'i de ekle
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("SqlServer"),

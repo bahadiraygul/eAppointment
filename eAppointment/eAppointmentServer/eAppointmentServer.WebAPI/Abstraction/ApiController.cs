@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eAppointmentServer.WebAPI.Abstraction;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public abstract class ApiController : ControllerBase
 {

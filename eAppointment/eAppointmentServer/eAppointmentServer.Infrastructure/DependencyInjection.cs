@@ -1,5 +1,6 @@
 ﻿using eAppointmentServer.Domain.Entities;
 using eAppointmentServer.Infrastructure.Context;
+using GenericRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
@@ -37,11 +38,14 @@ public static class DependencyInjection
             action.Password.RequireNonAlphanumeric = false;
         }).AddEntityFrameworkStores<ApplicationDbContext>();
 
+        services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
+
         services.Scan(action =>
         {
-            action.FromAssemblies(typeof(DependencyInjection).Assembly)
+            action
+            .FromAssemblies(typeof(DependencyInjection).Assembly)
             .AddClasses(publicOnly: false)
-            .UsingRegistrationStrategy(RegistrationStrategy.Skip)
+            .UsingRegistrationStrategy(registrationStrategy : RegistrationStrategy.Skip)
             .AsImplementedInterfaces()
             .WithScopedLifetime();
         });

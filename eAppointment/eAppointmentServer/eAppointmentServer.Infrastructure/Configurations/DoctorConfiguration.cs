@@ -28,9 +28,10 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
         // Department alanı için string dönüşümü
         builder.Property(d => d.Department)
             .HasConversion(
-                d => d.Name,  // DepartmentEnum -> string
-                name => DepartmentEnum.FromName(name, true)) // string -> DepartmentEnum
-            .HasColumnType("varchar(50)")
+                d => d.Value, // DepartmentEnum -> int
+                value => DepartmentEnum.FromValue(value)
+            )
+            .HasColumnType("int")
             .IsRequired();
 
         // FullName property'si için ignore, çünkü computed property

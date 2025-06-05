@@ -152,9 +152,8 @@ namespace eAppointmentServer.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
-                    b.Property<string>("Department")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
+                    b.Property<int>("Department")
+                        .HasColumnType("int");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
